@@ -1,0 +1,88 @@
+{
+  "name": "foxpage-component-boilerplate",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "boot": "lerna bootstrap",
+    "start": "start-storybook -p 55555",
+    "release:v": "lerna version",
+    "release:p": "npm run boot && lerna publish from-git",
+    "release": "npm run release:v && npm run release:p",
+    "build:foxpage": "foxpage-cmpt build --foxpage-root",
+    "package:new": "foxpage-cmpt package new --template package-templates/base-template --formate",
+    "package:select": "foxpage-cmpt package new --templates package-templates/ --formate",
+    "commit": "git-cz",
+    "lint": "eslint --cache --cache-location=.cache/eslint --ext .ts,.tsx --report-unused-disable-directives packages/",
+    "lint:fix": "npm run lint -- --fix",
+    "test": "jest",
+    "test:update": "npm run test -- --updateSnapshot",
+    "test:coverage": "npm run test -- --coverage --json --outputFile=./coverage/test-result.json",
+    "build-storybook": "build-storybook"
+  },
+  "author": "j.yangf",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run lint:fix",
+      "git add"
+    ],
+    "*.ts": [
+      "npm run lint:fix",
+      "git add"
+    ],
+    "*.tsx": [
+      "npm run lint:fix",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@foxpage/eslint-config-foxpage-component": "^0.1.3",
+    "@foxpage/foxpage-cli": "^0.1.22",
+    "@foxpage/foxpage-component-babel-preset": "^0.1.8",
+    "@foxpage/foxpage-component-context": "^0.1.7",
+    "@foxpage/foxpage-component-jest-preset": "^0.1.7",
+    "@foxpage/foxpage-component-storybook-addon": "^0.2.6",
+    "@foxpage/foxpage-component-storybook-preset": "^0.2.6",
+    "@storybook/addon-actions": "^6.2.9",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-knobs": "^6.2.9",
+    "@storybook/addon-links": "^6.2.9",
+    "@storybook/react": "^6.2.9",
+    "@types/jest": "^26.0.24",
+    "@types/react": "^16.14.8",
+    "@types/react-dom": "^16.9.13",
+    "eslint-plugin-prettier": "^3.1.0",
+    "git-cz": "^4.7.6",
+    "husky": "^4.3.8",
+    "jest": "^26.4.2",
+    "lerna": "^4.0.0",
+    "lint-staged": "^9.2.5",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "typescript": "^4.3.3"
+  },
+  "eslintIgnore": [
+    "node_modules",
+    "examples",
+    "dist",
+    "lib",
+    "es",
+    "config",
+    "babel.config.js",
+    "jest.config.js",
+    "*.js"
+  ]
+}

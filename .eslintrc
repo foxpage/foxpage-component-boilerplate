@@ -1,0 +1,5 @@
+{
+  "root": true,
+  "extends": "@foxpage/eslint-config-foxpage-component",
+  "rules": {}
+}

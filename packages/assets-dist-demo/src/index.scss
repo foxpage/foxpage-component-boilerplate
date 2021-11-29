@@ -1,0 +1,28 @@
+.test-svg {
+  height: 22px;
+  width: 22px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -6px;
+  background: url("./assets/airport.svg") center no-repeat;
+  background-size: 100% 100%;
+}
+
+.test-jpeg {
+  width: 400px;
+  height: 400px;
+  background: url("./assets/test-jpeg.jpeg") center no-repeat;
+  background-size: 100% 100%;
+}
+
+.test-webp {
+  width: 480px;
+  height: 70px;
+  background: url("./assets/test-webp.webp") center no-repeat;
+  background-size: 100% 100%;
+}
+
+.image-box {
+  max-width: 300px;
+  max-height: 300px;
+}

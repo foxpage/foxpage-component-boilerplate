@@ -1,0 +1,29 @@
+# cache
+.DS_Store
+*~
+.cache
+.fox_temp
+# packages
+node_modules/
+yarn.lock
+package-lock.json
+
+# editor
+.idea/
+.vscode/
+*.code-workspace
+
+# log
+log/
+*.log
+
+# compiler target
+dist/
+dist-zip/
+lib/
+es/
+public/
+# other
+coverage/
+storybook-static/
+__*.*

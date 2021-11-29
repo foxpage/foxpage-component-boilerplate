@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "charset": "utf-8",
+    "newLine": "LF",
+    "strict": true,
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "noUnusedParameters": true,
+    "noUnusedLocals": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "jsx": "react",
+    "lib": [
+      "dom",
+      "es7",
+      "esnext"
+    ],
+    "rootDir": ".",
+    "outDir": "lib",
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "target": "es6",
+    "module": "es6",
+    "sourceMap": true,
+    "declaration": true,
+    "removeComments": false
+  },
+  "include": [
+    "packages/*/src/*",
+    "packages/*/src/**/*",
+    "packages/*/test/*",
+    "packages/*/test/**/*",
+    "packages/*/stories/*",
+    "packages/*/stories/**/*",
+    "packages/*/editor/*",
+    "packages/*/editor/**/*",
+    "typing.d.ts",
+  ],
+  "exclude": [
+    "node_modules",
+    "lib",
+    "es",
+    "dist",
+    ".cache",
+    "__*"
+  ]
+}

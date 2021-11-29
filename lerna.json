@@ -1,0 +1,31 @@
+{
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "packages": [
+    "packages/*"
+  ],
+  "version": "independent",
+  "command": {
+    "version": {
+      "allowBranch": ["master"],
+      "push": false,
+      "private": false,
+      "message": "chore(release): publish",
+      "ignoreChanges": [
+        "index.stories.tsx",
+        "package-lock.json"
+      ],
+      "conventionalCommits": true,
+      "changelog": false
+    }
+  },
+  "ignoreChanges": [
+    "**/lib/**",
+    "**/es/**",
+    "**/dist/**",
+    "**/test/**",
+    "**/stories/**",
+    "**/*.md",
+    "**/package-lock.json"
+  ]
+}

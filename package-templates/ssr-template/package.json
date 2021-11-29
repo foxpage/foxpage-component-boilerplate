@@ -1,0 +1,43 @@
+{
+  "name": "___Name___",
+  "version": "0.0.0",
+  "foxpage": {
+    "publicPath": ""
+  },
+  "description": "foxpage component",
+  "keywords": [
+    "foxpage",
+    "component"
+  ],
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "npm run build:lib && npm run build:es && npm run build:foxpage",
+    "build:foxpage": "foxpage-cmpt build --foxpage",
+    "build:lib": "foxpage-cmpt build --lib",
+    "build:es": "foxpage-cmpt build --es-module",
+    "build:md": "foxpage-cmpt build --schema-md",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "core-js": "^3.0.0",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0"
+  },
+  "dependencies": {
+  },
+  "sideEffects": [
+    "*.css",
+    "*.less",
+    "*.scss"
+  ],
+    "files": [
+    "lib/**",
+    "es/**",
+    "dist/**",
+    "*.js",
+    "*.d.ts",
+    "schema.md"
+  ]
+}
