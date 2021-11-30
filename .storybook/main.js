@@ -16,8 +16,7 @@ module.exports = {
       options: {},
     },
     // 插件示例, 可自行删除引入代码及 "./addons" 下示例代码
-    // './addons/theme-addon/register.js',
-    // resolve(join(__dirname, './addons/theme-addon/register.js')),
+    './addons/theme-addon/register.js',
   ],
   // 可自定义设置
   // webpackFinal: async config => {

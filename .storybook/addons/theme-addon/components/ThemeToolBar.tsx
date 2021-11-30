@@ -7,8 +7,7 @@ import { ON_THEME_CHANGE, ThemeOptions, PARAMETERS_KEY } from '../constants';
 interface ThemeToolBarProps {}
 
 const ThemeToolBar: React.FC<ThemeToolBarProps> = () => {
-  const { theme, testFun } = useParameter(PARAMETERS_KEY, { theme: '', testFun: null });
-  // const { theme } = useParameter(PARAMETERS_KEY, { theme: '' });
+  const { theme } = useParameter(PARAMETERS_KEY, { theme: '' });
   const [selected, setSelected] = useState(theme || ThemeOptions[0]);
   // toolbar 先于 decorator, parameter 初始化, 此时 theme 为空
   useEffect(() => {
@@ -20,8 +19,7 @@ const ThemeToolBar: React.FC<ThemeToolBarProps> = () => {
   const handleSelect = useCallback((value: string) => {
     setSelected(value);
     channel.emit(ON_THEME_CHANGE, value);
-    if (testFun) testFun(value + '?');
-  }, [testFun]);
+  }, []);
 
   const links = useMemo(() => {
     return ThemeOptions.map(val => {

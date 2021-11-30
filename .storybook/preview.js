@@ -1,10 +1,10 @@
 import { makeFoxpageContextDecorator } from '@foxpage/foxpage-component-storybook-addon';
-// import { FoxpageCustomerContextDecorator } from './addons/customer-ctx-addon/decorator';
-// import { ThemeDecorator } from './addons/theme-addon/decorator';
+import { FoxpageCustomerContextDecorator } from './addons/customer-ctx-addon/decorator';
+import { ThemeDecorator } from './addons/theme-addon/decorator';
 
 export const decorators = [
-  // FoxpageCustomerContextDecorator,
-  // ThemeDecorator,
+  FoxpageCustomerContextDecorator,
+  ThemeDecorator,
   makeFoxpageContextDecorator(),
 ];
 
@@ -16,9 +16,5 @@ export const parameters = {
   // themeDemo 的配置参数, 可删除
   themeDemo: {
     theme: 'dark',
-    testFun: function (data) {
-      console.log(data);
-      window.localStorage.setItem('test-theme', data);
-    }
   },
 };

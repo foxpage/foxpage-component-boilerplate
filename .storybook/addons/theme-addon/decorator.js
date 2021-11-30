@@ -1,6 +1,6 @@
 import React from 'react';
 import { FoxpageCtxOverridesProvider } from '@foxpage/foxpage-component-context';
-import { makeDecorator, useChannel, useState, useMemo } from '@storybook/addons';
+import { makeDecorator, useChannel, useState, useMemo, useEffect } from '@storybook/addons';
 import { PARAMETERS_KEY, PARAMETERS_NAME, ThemeOptions, ON_THEME_CHANGE } from  './constants';
 
 export const ThemeDecoratorWrap = ({ ctx = {}, children }) => {
@@ -21,7 +21,7 @@ export const ThemeDecorator = makeDecorator({
     }
     const { theme: pTheme = ThemeOptions[0] } = parameters;
     const [theme, setTheme] = useState(pTheme);
-    useChannel({
+    const emit = useChannel({
       [ON_THEME_CHANGE]: (val) => setTheme(val),
     });
     const ctx = useMemo(() => {
