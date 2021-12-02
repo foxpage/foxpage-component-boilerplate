@@ -1,5 +1,4 @@
 import React from 'react';
-import axios from 'axios';
 import { FoxpageSsrCtxOverridesProvider } from '@foxpage/foxpage-component-storybook-addon';
 import { FoxpageCtxOverridesProvider } from '@foxpage/foxpage-component-context';
 
@@ -8,7 +7,7 @@ export const FoxpageCustomerContextDecorator = (StoryFn) => {
     locale: 'en-US',
   };
   const ssrCtx = {
-    axios,
+    ssrData: 'ssr data or api',
   };
   return (
     <FoxpageSsrCtxOverridesProvider value={{

@@ -1,8 +1,0 @@
-# AssetsDistDemo
-
-## Info
-
-## Usage
-
-```ts
-```
