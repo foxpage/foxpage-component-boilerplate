@@ -12,6 +12,7 @@ export const parameters = {
   // FoxpageContext 的配置参数, 可设置默认 context 参数
   foxpageContext: {
     context: {},
+    ssrContext: {},
   },
   // themeDemo 的配置参数, 可删除
   themeDemo: {
