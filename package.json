@@ -2,6 +2,9 @@
   "name": "foxpage-component-boilerplate",
   "version": "0.0.1",
   "private": true,
+  "foxpage": {
+    "group": "your-group-name"
+  },
   "scripts": {
     "boot": "lerna bootstrap",
     "start": "start-storybook -p 55555",
@@ -50,11 +53,11 @@
   },
   "dependencies": {
     "@foxpage/eslint-config-foxpage-component": "^0.1.4",
-    "@foxpage/foxpage-cli": "^0.1.23",
+    "@foxpage/foxpage-cli": "^0.1.24",
     "@foxpage/foxpage-component-babel-preset": "^0.1.9",
     "@foxpage/foxpage-component-context": "^0.1.9",
     "@foxpage/foxpage-component-jest-preset": "^0.1.8",
-    "@foxpage/foxpage-component-storybook-addon": "^0.2.9",
+    "@foxpage/foxpage-component-storybook-addon": "^0.2.10",
     "@foxpage/foxpage-component-storybook-preset": "^0.2.8",
     "@storybook/addon-actions": "^6.2.9",
     "@storybook/addon-essentials": "^6.2.9",

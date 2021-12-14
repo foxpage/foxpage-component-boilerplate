@@ -10,8 +10,11 @@
   "module": "es/index.js",
   "types": "lib/index.d.ts",
   "foxpage": {
+    "name": "___Name___",
     "publishPath": "",
-    "meta": {}
+    "meta": {},
+    "dependencies": [],
+    "disableContainer": false
   },
   "scripts": {
     "build": "npm run build:lib && npm run build:es && npm run build:foxpage",

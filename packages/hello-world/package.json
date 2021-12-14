@@ -9,8 +9,11 @@
   "module": "es/index.js",
   "types": "lib/index.d.ts",
   "foxpage": {
+    "name": "foxpage-component-demo-hello-world",
     "publishPath": "",
-    "meta": {}
+    "meta": {},
+    "dependencies": [],
+    "disableContainer": false
   },
   "scripts": {
     "build": "npm run build:lib && npm run build:es && npm run build:foxpage",
