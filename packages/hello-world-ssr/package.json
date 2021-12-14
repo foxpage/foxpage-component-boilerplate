@@ -8,6 +8,10 @@
   "main": "lib/index.js",
   "module": "es/index.js",
   "types": "lib/index.d.ts",
+  "foxpage": {
+    "publishPath": "",
+    "meta": {}
+  },
   "scripts": {
     "build": "npm run build:lib && npm run build:es && npm run build:foxpage",
     "build:foxpage": "foxpage-cmpt build --foxpage",
