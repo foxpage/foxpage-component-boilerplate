@@ -1,6 +1,6 @@
 /**
  * You can customize the Webpack configuration
- * The webpackFinal function will be run for 'production', 'node', 'debug', 'editor' mode.
+ * The webpackFinal function will be run for 'umd_prod', 'umd_dev', 'cjs_prod', 'cjs_dev', 'production', 'node', 'debug', 'editor' mode.
  * notice: It is recommended that you modify only externals and loader
  */
 
