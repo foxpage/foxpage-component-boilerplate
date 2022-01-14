@@ -1,15 +1,16 @@
 {
-  "name": "foxpage-component-demo-hello-world-ssr",
+  "name": "hello-component",
   "version": "0.0.0",
-  "description": "foxpage demo",
+  "description": "foxpage component",
   "keywords": [
+    "foxpage",
     "component"
   ],
   "main": "lib/index.js",
   "module": "es/index.js",
   "types": "lib/index.d.ts",
   "foxpage": {
-    "name": "foxpage-component-demo-hello-world-ssr",
+    "name": "hello-component",
     "publishPath": "",
     "meta": {},
     "dependencies": [],
@@ -21,7 +22,7 @@
     "build:es": "foxpage-cmpt build --es-module",
     "build:umd": "foxpage-cmpt build --umd",
     "build:cjs": "foxpage-cmpt build --cjs",
-    "build:foxpage": "foxpage-cmpt build --foxpage",
+    "build:foxpage": "foxpage-cmpt build --foxpage --ignore-modes editor",
     "build:md": "foxpage-cmpt build --schema-md",
     "prepublishOnly": "npm run build"
   },

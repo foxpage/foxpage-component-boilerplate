@@ -1,27 +1,29 @@
 {
-  "name": "foxpage-component-demo-hello-world-ssr",
+  "name": "___Name___",
   "version": "0.0.0",
-  "description": "foxpage demo",
+  "description": "foxpage editor component",
   "keywords": [
+    "foxpage",
+    "editor",
     "component"
   ],
   "main": "lib/index.js",
   "module": "es/index.js",
   "types": "lib/index.d.ts",
   "foxpage": {
-    "name": "foxpage-component-demo-hello-world-ssr",
+    "name": "___Name___",
     "publishPath": "",
     "meta": {},
     "dependencies": [],
     "disableContainer": false
   },
   "scripts": {
-    "build": "npm run build:lib && npm run build:es && npm run build:foxpage",
+    "build": "npm run build:lib && npm run build:es",
     "build:lib": "foxpage-cmpt build --lib",
     "build:es": "foxpage-cmpt build --es-module",
     "build:umd": "foxpage-cmpt build --umd",
     "build:cjs": "foxpage-cmpt build --cjs",
-    "build:foxpage": "foxpage-cmpt build --foxpage",
+    "build:foxpage": "foxpage-cmpt build --foxpage --ignore-modes editor",
     "build:md": "foxpage-cmpt build --schema-md",
     "prepublishOnly": "npm run build"
   },

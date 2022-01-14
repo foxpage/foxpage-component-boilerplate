@@ -20,6 +20,8 @@ log/
 # compiler target
 dist/
 dist-zip/
+umd/
+cjs/
 lib/
 es/
 public/

@@ -18,9 +18,11 @@
   },
   "scripts": {
     "build": "npm run build:lib && npm run build:es && npm run build:foxpage",
-    "build:foxpage": "foxpage-cmpt build --foxpage",
     "build:lib": "foxpage-cmpt build --lib",
     "build:es": "foxpage-cmpt build --es-module",
+    "build:umd": "foxpage-cmpt build --umd",
+    "build:cjs": "foxpage-cmpt build --cjs",
+    "build:foxpage": "foxpage-cmpt build --foxpage",
     "build:md": "foxpage-cmpt build --schema-md",
     "prepublishOnly": "npm run build"
   },
@@ -29,16 +31,17 @@
     "react": "^16.8.0",
     "react-dom": "^16.8.0"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "sideEffects": [
     "*.css",
     "*.less",
     "*.scss"
   ],
-    "files": [
+  "files": [
     "lib/**",
     "es/**",
+    "umd/**",
+    "cjs/**",
     "dist/**",
     "*.js",
     "*.d.ts",

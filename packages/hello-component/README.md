@@ -1,0 +1,8 @@
+# HelloComponent
+
+## Info
+
+## Usage
+
+```ts
+```
