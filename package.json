@@ -13,6 +13,8 @@
     "release:p": "npm run boot && lerna publish from-git",
     "release": "npm run release:v && npm run release:p",
     "build:foxpage": "foxpage-cmpt build --foxpage-root",
+    "build:umd": "foxpage-cmpt build --umd-root",
+    "build:cjs": "foxpage-cmpt build --cjs-root",
     "package:new": "foxpage-cmpt package new --template package-templates/base-template --formate",
     "package:select": "foxpage-cmpt package new --templates package-templates/ --formate",
     "commit": "git-cz",
