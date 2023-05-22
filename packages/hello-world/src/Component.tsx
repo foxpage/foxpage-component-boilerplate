@@ -3,7 +3,7 @@ import { ComponentProps } from './typing';
 import './index.scss';
 
 const HelloWorld: React.FC<ComponentProps> = props => {
-  const { text = 'Hello, world!', number = 1 } = props;
+  const { text = 'default text' } = props;
 
   return (
     <div>
@@ -11,10 +11,6 @@ const HelloWorld: React.FC<ComponentProps> = props => {
       <div className="text">
         text:
         <span className="text-bold">{text}</span>
-      </div>
-
-      <div>
-        Input Number: <span style={{ fontSize: 30 }}>{number}</span>
       </div>
     </div>
   );

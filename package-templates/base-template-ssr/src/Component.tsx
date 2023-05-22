@@ -9,23 +9,23 @@ import './index.scss';
 // please import `CustomerSsrCtxType` from your plugin-type package.
 type CustomerSsrCtxType = {};
 
-const ___ComponentName___: React.FC<ComponentProps> &
-  FoxpageComponentSsrLifecycle<ComponentProps, CustomerSsrCtxType> = ({ url, ssrData, children }) => {
-  return (
-    <div>
-      <h1>Hello world!</h1>
+const ___ComponentName___: React.FC<ComponentProps> & FoxpageComponentSsrLifecycle<ComponentProps, CustomerSsrCtxType> =
+  ({ url, ssrData, children }) => {
+    return (
       <div>
-        <h3>url</h3>
-        <p>{url}</p>
+        <h1>Hello world!</h1>
+        <div>
+          <h3>url</h3>
+          <p>{url}</p>
+        </div>
+        <div>
+          <h3>ssrData</h3>
+          <p>{ssrData}</p>
+        </div>
+        {children}
       </div>
-      <div>
-        <h3>ssrData</h3>
-        <p>{ssrData}</p>
-      </div>
-      {children}
-    </div>
-  );
-};
+    );
+  };
 
 ___ComponentName___.beforeNodeBuild = async (ctx, nodeData) => {
   console.debug('beforeNodeBuild ctx: ', ctx);

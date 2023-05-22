@@ -12,10 +12,6 @@ const Editor: EditorFC<ComponentProps> = props => {
           <Label>text:</Label>
           <Input propKey="text" />
         </Field>
-        <Field>
-          <Label>number:</Label>
-          <Input propKey="number" />
-        </Field>
       </Group>
     </div>
   );

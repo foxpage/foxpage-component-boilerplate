@@ -9,9 +9,11 @@ export default {
   component: HelloWorld,
 };
 
-export const BaseUsage = () => <HelloWorld text="test" number={1} />;
+export const BaseUsage = () => <HelloWorld />;
 
 export const WithEditor = () => {
-  const props = mountEditor(Editor, {});
+  const props = mountEditor(Editor, {
+    text: `text from editor`,
+  });
   return <HelloWorld {...props} />;
 };

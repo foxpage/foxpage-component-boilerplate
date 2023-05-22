@@ -9,8 +9,8 @@ const Editor: EditorFC<ComponentProps> = props => {
       <Group>
         <Title>Base</Title>
         <Field>
-          {/* <Label>text:</Label> */}
-          {/* <Input propKey="text" /> */}
+          <Label>text:</Label>
+          <Input propKey="text" />
         </Field>
       </Group>
     </div>

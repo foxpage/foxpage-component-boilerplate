@@ -1,16 +1,16 @@
 import React from 'react';
 import { mountEditor, withFoxpageEditor } from '@foxpage/foxpage-component-editor-storybook-addon';
 import { withFoxpageSsr } from '@foxpage/foxpage-component-storybook-addon';
-import HelloWorld from '../src/index';
+import HelloWorldSsr from '../src/index';
 import Editor from '../editor';
 import { ComponentProps } from '../src/typing';
 
-HelloWorld.displayName = 'foxpage-component-demo-hello-world-ssr';
+HelloWorldSsr.displayName = 'foxpage-component-demo-hello-world-ssr';
 
 export default {
   title: 'HelloWorldSsr',
   decorators: [withFoxpageEditor],
-  component: HelloWorld,
+  component: HelloWorldSsr,
 };
 
 const HelloWorldSsrWrap = withFoxpageSsr<ComponentProps>({
@@ -28,11 +28,13 @@ const HelloWorldSsrWrap = withFoxpageSsr<ComponentProps>({
   nodeData: {
     id: 'test-123',
   },
-})(HelloWorld);
+})(HelloWorldSsr);
+
+export const BaseUsage = () => <HelloWorldSsrWrap />;
 
 export const WithEditor = () => {
   const props = mountEditor(Editor, {
-    number: 2,
+    text: `text from editor`,
   });
   return <HelloWorldSsrWrap {...props} />;
 };
