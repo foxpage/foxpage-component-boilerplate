@@ -6,8 +6,8 @@
     "group": "your-group-name"
   },
   "scripts": {
-    "init": "lerna bootstrap && lerna run build",
-    "boot": "lerna bootstrap",
+    "init": "npm run boot && lerna run build",
+    "boot": "npm install",
     "vite": "cross-env STORYBOOK_BUILDER=vite npm start",
     "start": "start-storybook -p 55555",
     "release:v": "lerna version",
