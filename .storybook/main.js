@@ -7,12 +7,10 @@ const { mergeConfig } = require('vite');
 module.exports = {
   // add your stories paths, use glob syntax
   // default: "../packages/**/*.{stories,story}.{tsx,js,jsx}"
-  stories: [
-    "../packages/**/*.{stories,story}.{tsx,js,jsx}"
-  ],
+  stories: ['../packages/**/*.{stories,story}.{tsx,js,jsx}'],
 
   core: {
-    builder: process.env.STORYBOOK_BUILDER === 'vite' ? '@storybook/builder-vite' : 'webpack4'
+    builder: 'webpack4',
   },
 
   addons: [
@@ -31,15 +29,4 @@ module.exports = {
   // webpackFinal: async config => {
   //   return config;
   // },
-  async viteFinal(config) {
-    // Merge custom configuration into the default config
-    return mergeConfig(config, {
-      // Use the same "resolve" configuration as your app
-      resolve: (await import('../vite.config.js')).default.resolve,
-      // Add dependencies to pre-optimization
-      // optimizeDeps: {
-      //   include: ['storybook-dark-mode'],
-      // },
-    });
-  },
 };
