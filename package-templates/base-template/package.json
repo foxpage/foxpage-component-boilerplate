@@ -18,12 +18,12 @@
   },
   "scripts": {
     "build": "npm run build:lib && npm run build:es && npm run build:foxpage",
-    "build:lib": "foxpage-cmpt build --lib",
-    "build:es": "foxpage-cmpt build --es-module",
-    "build:umd": "foxpage-cmpt build --umd",
-    "build:cjs": "foxpage-cmpt build --cjs",
-    "build:foxpage": "foxpage-cmpt build --foxpage",
-    "build:md": "foxpage-cmpt build --schema-md",
+    "build:lib": "foxpage build --lib",
+    "build:es": "foxpage build --es-module",
+    "build:umd": "foxpage build --umd",
+    "build:cjs": "foxpage build --cjs",
+    "build:foxpage": "foxpage build --foxpage",
+    "build:md": "foxpage build --schema-md",
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
