@@ -1,8 +1,10 @@
 import React from 'react';
+
 import { mountEditor, withFoxpageEditor } from '@foxpage/foxpage-component-editor-storybook-addon';
 import { withFoxpageSsr } from '@foxpage/foxpage-component-storybook-addon';
-import HelloWorldSsr from '../src/index';
+
 import Editor from '../editor';
+import HelloWorldSsr from '../src/index';
 import { ComponentProps } from '../src/typing';
 
 HelloWorldSsr.displayName = 'foxpage-component-demo-hello-world-ssr';

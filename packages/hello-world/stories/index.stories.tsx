@@ -1,19 +1,30 @@
 import React from 'react';
-import { mountEditor, withFoxpageEditor } from '@foxpage/foxpage-component-editor-storybook-addon';
-import HelloWorld from '../src/index';
-import Editor from '../editor';
 
-export default {
+import type { Meta, StoryObj } from '@storybook/react';
+
+import { mountEditor, withFoxpageEditor } from '@foxpage/foxpage-component-editor-storybook-addon';
+
+import Editor from '../editor';
+import HelloWorld from '../src/index';
+
+const meta = {
   title: 'HelloWorld',
-  decorators: [withFoxpageEditor],
   component: HelloWorld,
+  decorators: [withFoxpageEditor],
+} satisfies Meta<typeof HelloWorld>;
+
+export default meta;
+type Story = StoryObj<typeof HelloWorld>;
+
+export const BaseUsage: Story = {
+  render: () => <HelloWorld />,
 };
 
-export const BaseUsage = () => <HelloWorld />;
-
-export const WithEditor = () => {
-  const props = mountEditor(Editor, {
-    text: `text from editor`,
-  });
-  return <HelloWorld {...props} />;
+export const WithEditor: Story = {
+  render: () => {
+    const props = mountEditor(Editor, {
+      text: `text from editor`,
+    });
+    return <HelloWorld {...props} />;
+  },
 };

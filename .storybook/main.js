@@ -2,15 +2,12 @@
  * this file is for config storybook
  * @see https://storybook.js.org/docs/react/configure/overview
  */
-const { mergeConfig } = require('vite');
+const config = {
+  stories: ['../packages/*/stories/**/*.stories.@(ts|tsx|js|jsx)'],
 
-module.exports = {
-  // add your stories paths, use glob syntax
-  // default: "../packages/**/*.{stories,story}.{tsx,js,jsx}"
-  stories: ['../packages/**/*.{stories,story}.{tsx,js,jsx}'],
-
-  core: {
-    builder: 'webpack4',
+  framework: {
+    name: '@storybook/react-webpack5',
+    options: {},
   },
 
   addons: [
@@ -21,12 +18,17 @@ module.exports = {
     // 插件示例, 可自行删除引入代码及 "./addons" 下示例代码
     './addons/theme-addon/register.js',
   ],
-  managerWebpack: (config, options) => {
-    options.cache.set = () => Promise.resolve();
+
+  core: {
+    disableTelemetry: true,
+  },
+
+  webpackFinal: async config => {
+    // Filter out stories loader and keep only babel-loader
+    console.log('!~~~', config.module.rules[1], config.module.rules[0], config.module.rules);
+
     return config;
   },
-  // 可自定义设置
-  // webpackFinal: async config => {
-  //   return config;
-  // },
 };
+
+export default config;

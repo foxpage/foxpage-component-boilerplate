@@ -1,8 +1,9 @@
 import React from 'react';
+import type { Decorator } from '@storybook/react';
 import { FoxpageSsrCtxOverridesProvider } from '@foxpage/foxpage-component-storybook-addon';
 import { FoxpageCtxOverridesProvider } from '@foxpage/foxpage-component-context';
 
-export const FoxpageCustomerContextDecorator = (StoryFn) => {
+export const FoxpageCustomerContextDecorator: Decorator = (Story, context) => {
   const ctx = {
     locale: 'en-US',
   };
@@ -10,13 +11,15 @@ export const FoxpageCustomerContextDecorator = (StoryFn) => {
     ssrData: 'ssr data or api',
   };
   return (
-    <FoxpageSsrCtxOverridesProvider value={{
-      ...ssrCtx,
-      ...ctx,
-    }}>
+    <FoxpageSsrCtxOverridesProvider
+      value={{
+        ...ssrCtx,
+        ...ctx,
+      }}
+    >
       <FoxpageCtxOverridesProvider value={ctx}>
-        <StoryFn />
+        <Story {...context} />
       </FoxpageCtxOverridesProvider>
     </FoxpageSsrCtxOverridesProvider>
-  )
+  );
 };

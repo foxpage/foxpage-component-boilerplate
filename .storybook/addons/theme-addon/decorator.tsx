@@ -1,14 +1,11 @@
 import React from 'react';
 import { FoxpageCtxOverridesProvider } from '@foxpage/foxpage-component-context';
-import { makeDecorator, useChannel, useState, useMemo, useEffect } from '@storybook/addons';
-import { PARAMETERS_KEY, PARAMETERS_NAME, ThemeOptions, ON_THEME_CHANGE } from  './constants';
+import { makeDecorator, useChannel } from '@storybook/preview-api';
+import { useState, useMemo } from 'react';
+import { PARAMETERS_KEY, PARAMETERS_NAME, ThemeOptions, ON_THEME_CHANGE } from './constants';
 
 export const ThemeDecoratorWrap = ({ ctx = {}, children }) => {
-  return (
-    <FoxpageCtxOverridesProvider value={ctx}>
-      {children}
-    </FoxpageCtxOverridesProvider>
-  )
+  return <FoxpageCtxOverridesProvider value={ctx}>{children}</FoxpageCtxOverridesProvider>;
 };
 
 export const ThemeDecorator = makeDecorator({
@@ -22,17 +19,13 @@ export const ThemeDecorator = makeDecorator({
     const { theme: pTheme = ThemeOptions[0] } = parameters;
     const [theme, setTheme] = useState(pTheme);
     const emit = useChannel({
-      [ON_THEME_CHANGE]: (val) => setTheme(val),
+      [ON_THEME_CHANGE]: val => setTheme(val),
     });
     const ctx = useMemo(() => {
       return {
         theme,
       };
     }, [theme]);
-    return (
-      <ThemeDecoratorWrap ctx={ctx}>
-        {storyFn(context)}
-      </ThemeDecoratorWrap>
-    );
-  }
+    return <ThemeDecoratorWrap ctx={ctx}>{storyFn(context)}</ThemeDecoratorWrap>;
+  },
 });

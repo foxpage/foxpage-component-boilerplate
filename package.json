@@ -9,7 +9,7 @@
     "init": "npm run boot && lerna run build",
     "boot": "npm install",
     "vite": "cross-env STORYBOOK_BUILDER=vite npm start",
-    "start": "start-storybook -p 55555",
+    "start": "storybook dev -p 55555",
     "release:v": "lerna version",
     "release:p": "npm run boot && lerna publish from-git",
     "release": "npm run release:v && npm run release:p",
@@ -25,7 +25,7 @@
     "test": "jest",
     "test:update": "npm run test -- --updateSnapshot",
     "test:coverage": "npm run test -- --coverage --json --outputFile=./coverage/test-result.json",
-    "build-storybook": "build-storybook"
+    "build-storybook": "storybook build"
   },
   "workspaces": [
     "packages/*"
@@ -71,17 +71,24 @@
     "*.js"
   ],
   "devDependencies": {
-    "@foxpage/foxpage-cli": "^2.0.2",
     "@foxpage/eslint-config-foxpage-component": "^0.2.0",
-    "@foxpage/foxpage-component-babel-preset": "^0.1.10",
+    "@foxpage/foxpage-cli": "^3.0.0",
+    "@foxpage/foxpage-component-babel-preset": "^0.2.0",
+    "@foxpage/foxpage-component-editor-storybook-addon": "^0.5.0",
+    "@foxpage/foxpage-component-editor-widgets": "^0.6.3",
     "@foxpage/foxpage-component-jest-preset": "^0.1.12",
-    "@foxpage/foxpage-component-storybook-addon": "^0.2.16",
-    "@foxpage/foxpage-component-storybook-preset": "^0.4.3",
-    "@storybook/addon-actions": "^6.2.9",
-    "@storybook/addon-essentials": "^6.2.9",
-    "@storybook/addon-knobs": "^6.2.9",
-    "@storybook/addon-links": "^6.2.9",
-    "@storybook/react": "^6.2.9",
+    "@foxpage/foxpage-component-storybook-addon": "^0.3.1",
+    "@foxpage/foxpage-component-storybook-preset": "^0.5.8",
+    "@foxpage/foxpage-component-webpack": "^0.4.0",
+    "@storybook/addon-actions": "^8.4.0",
+    "@storybook/addon-essentials": "^8.4.0",
+    "@storybook/addon-links": "^8.4.0",
+    "@storybook/addon-webpack5-compiler-babel": "^3.0.0",
+    "@storybook/components": "^8.4.0",
+    "@storybook/manager-api": "^8.4.0",
+    "@storybook/preview-api": "^8.4.0",
+    "@storybook/react": "^8.4.0",
+    "@storybook/react-webpack5": "^8.4.0",
     "@types/jest": "^26.0.24",
     "@types/react": "^16.14.8",
     "@types/react-dom": "^16.9.13",
@@ -93,6 +100,8 @@
     "jest": "^26.4.2",
     "lerna": "^4.0.0",
     "lint-staged": "^9.2.5",
-    "typescript": "^4.3.3"
+    "storybook": "^8.4.0",
+    "typescript": "^4.3.3",
+    "webpack": "^5.0.0"
   }
 }
