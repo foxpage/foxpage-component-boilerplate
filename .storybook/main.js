@@ -2,7 +2,6 @@
  * this file is for config storybook
  * @see https://storybook.js.org/docs/react/configure/overview
  */
-const { mergeConfig } = require('vite');
 
 module.exports = {
   // add your stories paths, use glob syntax
@@ -10,7 +9,7 @@ module.exports = {
   stories: ['../packages/**/*.{stories,story}.{tsx,js,jsx}'],
 
   core: {
-    builder: 'webpack4',
+    builder: '@storybook/builder-webpack5',
   },
 
   addons: [

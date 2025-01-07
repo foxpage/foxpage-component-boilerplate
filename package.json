@@ -71,16 +71,18 @@
     "*.js"
   ],
   "devDependencies": {
-    "@foxpage/foxpage-cli": "^2.0.2",
     "@foxpage/eslint-config-foxpage-component": "^0.2.0",
-    "@foxpage/foxpage-component-babel-preset": "^0.1.10",
+    "@foxpage/foxpage-cli": "^3.0.0",
+    "@foxpage/foxpage-component-babel-preset": "^0.2.0",
     "@foxpage/foxpage-component-jest-preset": "^0.1.12",
-    "@foxpage/foxpage-component-storybook-addon": "^0.2.16",
-    "@foxpage/foxpage-component-storybook-preset": "^0.4.3",
+    "@foxpage/foxpage-component-storybook-addon": "^0.3.2",
+    "@foxpage/foxpage-component-storybook-preset": "^0.5.9",
     "@storybook/addon-actions": "^6.2.9",
     "@storybook/addon-essentials": "^6.2.9",
     "@storybook/addon-knobs": "^6.2.9",
     "@storybook/addon-links": "^6.2.9",
+    "@storybook/builder-webpack5": "^6.2.9",
+    "@storybook/manager-webpack5": "^6.2.9",
     "@storybook/react": "^6.2.9",
     "@types/jest": "^26.0.24",
     "@types/react": "^16.14.8",
@@ -93,6 +95,7 @@
     "jest": "^26.4.2",
     "lerna": "^4.0.0",
     "lint-staged": "^9.2.5",
-    "typescript": "^4.3.3"
+    "typescript": "^4.3.3",
+    "webpack": "^5.89.0"
   }
 }
