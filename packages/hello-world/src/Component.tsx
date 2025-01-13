@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { ComponentProps } from './typing';
+
 import './index.scss';
 
 const HelloWorld: React.FC<ComponentProps> = props => {

@@ -8,7 +8,6 @@
   "scripts": {
     "init": "npm run boot && lerna run build",
     "boot": "npm install",
-    "vite": "cross-env STORYBOOK_BUILDER=vite npm start",
     "start": "start-storybook -p 55555",
     "release:v": "lerna version",
     "release:p": "npm run boot && lerna publish from-git",
