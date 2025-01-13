@@ -1,7 +1,9 @@
 import React from 'react';
+
 import { mountEditor, withFoxpageEditor } from '@foxpage/foxpage-component-editor-storybook-addon';
-import HelloWorld from '../src/index';
+
 import Editor from '../editor';
+import HelloWorld from '../src/index';
 
 export default {
   title: 'HelloWorld',

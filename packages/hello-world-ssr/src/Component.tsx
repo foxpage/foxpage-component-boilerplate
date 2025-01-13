@@ -1,7 +1,10 @@
 import React from 'react';
+
 import { useFoxpageContext } from '@foxpage/foxpage-component-context';
 import { FoxpageComponentSsrLifecycle } from '@foxpage/foxpage-component-storybook-addon';
+
 import { ComponentProps } from './typing';
+
 import './index.scss';
 
 // please import `CustomerSsrCtxType` from your plugin-type package.
